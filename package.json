@@ -32,6 +32,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .mjs ./src",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "./src/index.mjs"
   },
