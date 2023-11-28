@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "files": [
-    "src"
+    "build"
   ],
   "repository": {
     "type": "https",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/plitzi"
   },
-  "main": "./src/index.mjs",
+  "main": "./build/index.js",
   "dependencies": {
     "axios": "^1.6.2",
     "chalk": "^5.3.0",
@@ -21,6 +21,11 @@
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/eslint-parser": "^7.23.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.23.4",
+    "@babel/preset-env": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
@@ -28,15 +33,22 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "prettier": "^3.1.0"
+    "prettier": "^3.1.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "thread-loader": "^4.0.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "lint": "eslint --ext .mjs ./src",
-    "build": "",
+    "build:dev": "webpack --mode development",
+    "build:dev-watch": "webpack --mode development --env watch",
+    "build:prod": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "./src/index.mjs"
   },
   "bin": {
-    "plitzi": "./src/index.mjs"
+    "plitzi": "./build/index.js"
   }
 }

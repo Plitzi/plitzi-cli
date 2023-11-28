@@ -1,0 +1,9 @@
+.eslintrc.js
+src
+yarn.lock
+README.md
+.github
+.gitignore
+.prettierrc
+webpack.config.*
+.yarnrc.yml
