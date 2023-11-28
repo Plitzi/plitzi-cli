@@ -1,0 +1,41 @@
+{
+  "name": "@plitzi/plitzi-cli",
+  "version": "0.0.1",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/plitzi/plitzi-cli.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/plitzi"
+  },
+  "main": "./src/index.mjs",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/eslint-parser": "^7.23.3",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .mjs ./src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "./src/index.mjs"
+  },
+  "bin": {
+    "plitzi": "./src/index.mjs"
+  }
+}
