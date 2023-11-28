@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // Packages
 import { program } from 'commander';
 
