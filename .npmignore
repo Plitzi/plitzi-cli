@@ -7,3 +7,4 @@ README.md
 .prettierrc
 webpack.config.*
 .yarnrc.yml
+.yarn
